@@ -57,7 +57,7 @@ module CarrierWave
       # [identifier (String)] new identifier for file
       #
       def update_identifier!(identifier)
-        uploader.model.update_column(uploader.mounted_as, identifier)
+        uploader.model.update_attribute(uploader.mounted_as, identifier)
       end
 
       def vault_id
